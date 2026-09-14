@@ -22,8 +22,6 @@ function Biblioteka() {
         <label><b>Numer ksiażki:</b> </label> <input type='number' onChange={((e) => setNumber(e.value.target))}></input> <br></br> <br></br>
         <input type='button' value='Wypożycz'></input> 
       </div>
-
-      {if()}
       
     
 
