@@ -9,17 +9,16 @@ function Biblioteka() {
   const [bookNumber, setBookNumber] = useState("")
 
   const borrowBook = () => {
+    
     const number = parseInt(bookNumber)
 
     if (number >= 1 && number <= books.length) {
-      console.log(
-        `Wypożyczenie: ${readerName}, książka: ${books[number - 1]}`
-      )
+      console.log(`Imię czytelnika: ${readerName} | Książka: ${books[number - 1]}`)
     } else {
-      console.log("Nieprawidłowy numer książki")
+      console.log("Nieprawidłowy numer książki!")
     }
   }
-
+ 
   return (
     <div className="p-3">
       
@@ -32,12 +31,12 @@ function Biblioteka() {
       </ol>
 
       <form className="mt-4">
-
+        
         <div className="mb-3">
 
           <label htmlFor="readerName" className="form-label">Imię czytelnika:</label>
 
-          <input type="text" className="form-control" value={readerName} onChange={(e) => setReaderName(e.target.value)}/>
+          <input type="text" id="readerName" className="form-control" value={readerName} onChange={(e) => setReaderName(e.target.value)}/>
        
         </div>
 
